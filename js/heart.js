@@ -30210,6 +30210,7 @@
                   this.loader.load(
                     "rocket.glb",
                     function (t) {
+                        new i.Box3().setFromObject(t.scene);
                       t.scene.traverse(function (t) {
                         t.isMesh,
                           "Voronoi_Fracture" === t.name &&
