@@ -9,6 +9,12 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 	font-size: 14px;
 }
 
+.logo {
+position: absolute;
+top: 58px;
+left: 58px;
+}
+
 body {
 	--color-text: #e0e0e0;
 	--color-text-secondary: #5e6262;
