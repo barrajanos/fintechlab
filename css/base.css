@@ -19,8 +19,12 @@ left: 58px;
 font-size: 64px;
 color: black;
 font-weight: 400;
-    width: 600px;
+width: 600px;
+position: absolute;
+top: 25%;
+left: 56px;
 }
+
 
 
 .lead span {
