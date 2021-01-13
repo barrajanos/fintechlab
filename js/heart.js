@@ -30208,7 +30208,7 @@
                 new i.Vector3(0, 0, 0);
                 (this.voron = []),
                   this.loader.load(
-                    "cube.glb",
+                    "heart-high.glb",
                     function (t) {
 
                       t.scene.traverse(function (t) {
