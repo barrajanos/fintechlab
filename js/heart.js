@@ -30180,7 +30180,7 @@
               0.001,
               1e3
             )),
-            this.camera.position.set(0, 300, 0),
+            this.camera.position.set(0, 7, 7),
             (this.time = 0),
             (this.loader = new i.GLTFLoader().setPath("models/")),
             i.DRACOLoader.setDecoderPath("js/lib/draco/"),
