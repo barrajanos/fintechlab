@@ -20,7 +20,7 @@
 				'container', // id of DOM el
 				{
 					surface: '13E7CF',
-					inside: 'E1E1E1',
+					inside: 'e2e2e2',
 					background: 'FFFFFF',
 					onLoad: () => {
 		                document.body.classList.remove('loading');
@@ -28,7 +28,7 @@
 				}
 			);
 
-			let targetMouseX = 0, mouseX = 0, ta = 500;
+			let targetMouseX = 0, mouseX = 0, ta = 0;
 			const sign = function(n) { return n === 0 ? 1 : n/Math.abs(n); };
 			document.addEventListener('mousemove',(e) => {
 			  targetMouseX = 2*(e.clientX - animation.width/2)/animation.width;
@@ -50,6 +50,10 @@
 			}
 			draw() 
 
-		</script>
+        </script>
+        		<script src="js/ico.js"></script>
+                <script src="js/TweenMax.min.js"></script>
+                <script src="js/charming.min.js"></script>
+                <script src="js/demo.js"></script>
 	</body>
 </html>
