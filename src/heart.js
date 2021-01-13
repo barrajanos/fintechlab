@@ -114,7 +114,7 @@ export default class Sketch {
     this.voron = [];
 
     this.loader.load(
-      "heart-high.glb",
+      "rocket.glb",
       function(gltf) {
         gltf.scene.traverse(function(child) {
           if (child.name === "Voronoi_Fracture") {
