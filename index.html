@@ -1,1 +1,53 @@
-We are banking innovation and design lab.
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>MKB Fintechlab</title>
+		<meta name="description" content="We are banking innovation and design lab." />
+		<link rel="stylesheet" href="https://use.typekit.net/tsb3xby.css">
+		<link rel="stylesheet" type="text/css" href="example/css/base.css" />
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+	</head>
+	<body class="demo-heart loading">
+		<main><div id="container"></div>
+		</main>
+		<script src="js/heart.js"></script>
+		<script>
+			let animation = new explosion.default(
+				'container', // id of DOM el
+				{
+					surface: '9258fc',
+					inside: 'e2e2e2',
+					background: '151616',
+					onLoad: () => {
+		                document.body.classList.remove('loading');
+		            }
+				}
+			);
+
+			let targetMouseX = 0, mouseX = 0, ta = 0;
+			const sign = function(n) { return n === 0 ? 1 : n/Math.abs(n); };
+			document.addEventListener('mousemove',(e) => {
+			  targetMouseX = 2*(e.clientX - animation.width/2)/animation.width;
+			});
+
+			document.addEventListener('touchmove',(e) => {
+			  targetMouseX = ( e.touches[0].clientX / animation.width ) * 2 - 1;
+			});
+
+			function draw(){
+				if(animation){
+					mouseX += (targetMouseX - mouseX)*0.05;
+					ta = Math.abs(mouseX);
+					animation.settings.progress = ta;
+					animation.scene.rotation.y = Math.PI/2 - ta*(2 - ta)*Math.PI * sign(mouseX);
+					// animation.scene.rotation.z = Math.PI/2 - ta*(2 - ta)*Math.PI * sign(mouseX);
+				}
+				window.requestAnimationFrame(draw);
+			}
+			draw() 
+
+		</script>
+	</body>
+</html>
